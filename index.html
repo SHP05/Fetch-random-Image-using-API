@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSNALITY</h1>
+        <div class="div1">
+            
+            <div class="imgdiv">
+                <img src="logo.jpg" alt="image" id="img" width="200" height="200">
+            </div>
+            <div class="details">
+                <label for="">ENTER YOUR NAME </label><br>
+                <input type="text" id="apiid">
+            </div>
+            <button id="btn" onclick="api()">CLICK HERE</button>
+        </div>
+    </section>
+</body>
+<script>
+     
+</script>
+<script>
+    let a = document.getElementById('apiid');
+    let b = document.getElementById('btn');
+    let i = document.getElementById('img');
+    const val = a.value;
+    a.focus();
+   
+    function api(){
+        b.classList.add("loading")
+        b.innerText = "Loading..."
+        
+       ,() =>{
+            // alert("Your name is " + a.value);
+            i.setAttribute('src',`https://joeschmoe.io/api/v1/${a.value}`);
+            b.classList.remove("loading");
+            b.innerText="CLICK HERE";
+        }
+       
+    }
+</script>
+</html>
